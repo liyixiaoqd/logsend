@@ -1,0 +1,10 @@
+GEM
+  remote: https://ruby.taobao.org/
+  specs:
+    poseidon (0.0.5)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  poseidon
