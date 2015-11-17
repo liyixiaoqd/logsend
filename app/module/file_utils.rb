@@ -1,10 +1,10 @@
-require File.expand_path('../../../app/class/send_message', __FILE__)
+﻿require File.expand_path('../../../app/class/send_message', __FILE__)
 
 module FileUtils
-	def FileUtils.MonitorFile(filename,topic)
+	def FileUtils.MonitorFile(filename,topic,seek)
 		sleep_time=15
 		file=File.open(filename) 
-		send_pos=0
+		send_pos=seek
 		sm=SendMessage.new(topic)
 		pre_output=""
 		now_output=""

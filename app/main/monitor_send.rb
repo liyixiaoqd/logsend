@@ -7,6 +7,11 @@ end
 
 filename=ARGV[0]
 topic=ARGV[1]
-p "start monitor file[#{filename} and send to [#{topic}]"
+seek=0
+if ARGV.length>2
+        seek=ARGV[2].to_i
+end
 
-FileUtils.MonitorFile(filename,topic)
+p "start monitor file[#{filename} and send to [#{topic}] from size:[#{seek}]"
+
+FileUtils.MonitorFile(filename,topic,seek)
